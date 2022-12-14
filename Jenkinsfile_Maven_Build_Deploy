@@ -1,5 +1,5 @@
 /*
-- This Jenkinsfile will create a maven build, archive the artifacts, and use Deploy to Container Plugin to deploy artifacts on Webserver as per SDLC Environment.
+- This Jenkinsfile will create a build, archive the artifacts, and use Deploy to Container Plugin to deploy artifacts on Webserver as per SDLC Environment.
 Validate details in the Jenkinsfile for : Webserver Path,Credentials ID.
 Make sure below Apache Tomcate Web Servers are already setup for SDLC Environments.
 */
@@ -7,7 +7,7 @@ Make sure below Apache Tomcate Web Servers are already setup for SDLC Environmen
 pipeline {
     agent any
     tools {
-        maven 'Maven_Local'
+        maven 'local_maven'
     }
     parameters {
         string(name: 'SDLC_ENV', defaultValue: '', description: 'Enter SDLC Environment')
