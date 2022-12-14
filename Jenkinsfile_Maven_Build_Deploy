@@ -18,7 +18,7 @@ pipeline {
             steps {
                 echo 'Building..'
                 echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
-                dir("${env.WORKSPACE}/tomcat-app"){
+                dir("${env.WORKSPACE}/"){
                     sh "pwd"
                     sh 'mvn clean install -f pom.xml'
                 }
